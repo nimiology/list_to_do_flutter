@@ -12,17 +12,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          margin: const EdgeInsets.symmetric(vertical: 30, horizontal: 15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              HomeScreenAppBar(),
-              Greeting(),
-              HomeScreenIconButtons(),
-              TodayTasks(),
-            ],
-          ),
+        child: ListView(
+          children: [
+            HomeScreenAppBar(),
+            Greeting(),
+            HomeScreenIconButtons(),
+            TodayTasks(),
+          ],
         ),
       ),
     );

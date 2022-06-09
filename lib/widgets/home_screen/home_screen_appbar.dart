@@ -7,6 +7,7 @@ class HomeScreenAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
     return Container(
+      margin: const EdgeInsets.only(top: 30, right: 12.5, left: 12.5),
       width: deviceSize.width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

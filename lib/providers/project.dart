@@ -1,5 +1,5 @@
-import 'team_model.dart';
-import 'user_model.dart';
+import 'team.dart';
+import 'user.dart';
 
 class Project {
   final int id;

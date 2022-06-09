@@ -1,4 +1,4 @@
-import 'project_model.dart';
+import 'project.dart';
 
 class Section {
   final int id;

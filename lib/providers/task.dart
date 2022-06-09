@@ -1,6 +1,8 @@
-import 'label_model.dart';
-import 'section_model.dart';
-import 'user_model.dart';
+import 'package:flutter/material.dart';
+
+import 'label.dart';
+import 'section.dart';
+import 'user.dart';
 
 class Task {
   final int id;
@@ -36,4 +38,12 @@ class Task {
     this.every,
     this.completedDate,
   });
+}
+
+class Tasks with ChangeNotifier{
+  List<Task> _tasks = [];
+
+  List<Task> get tasks{
+    return [..._tasks];
+  }
 }

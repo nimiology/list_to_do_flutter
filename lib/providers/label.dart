@@ -1,4 +1,4 @@
-import 'user_model.dart';
+import 'user.dart';
 
 class Label {
   final int id;

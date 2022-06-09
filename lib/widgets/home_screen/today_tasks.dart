@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../task_list_tile.dart';
+
 class TodayTasks extends StatefulWidget {
   const TodayTasks({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class _TodayTasksState extends State<TodayTasks> {
 
     return Container(
       width: deviceSize.width,
-      margin: const EdgeInsets.symmetric(vertical: 25, horizontal: 5),
+      margin: const EdgeInsets.symmetric(vertical: 25, horizontal: 17.5),
       child: Column(
         children: <Widget>[
           Row(
@@ -55,7 +57,7 @@ class _TodayTasksState extends State<TodayTasks> {
               )
             ],
           ),
-
+          if (_expanded) TaskListTile(),
         ],
       ),
     );

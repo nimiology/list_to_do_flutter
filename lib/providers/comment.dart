@@ -1,6 +1,6 @@
-import 'project_model.dart';
-import 'task_model.dart';
-import 'user_model.dart';
+import 'project.dart';
+import 'task.dart';
+import 'user.dart';
 
 class Comment{
   final int id;

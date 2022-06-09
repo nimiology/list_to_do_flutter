@@ -40,6 +40,7 @@ class HomeScreenIconButtons extends StatelessWidget {
     return Container(
         width: deviceSize.width,
         height: deviceSize.height * 0.21,
+        margin:const EdgeInsets.symmetric( horizontal: 12.5),
         decoration: BoxDecoration(
             color: Theme.of(context).primaryColor,
             borderRadius: const BorderRadius.all(Radius.circular(25))),

@@ -1,8 +1,8 @@
-import 'project_model.dart';
-import 'user_model.dart';
-import 'section_model.dart';
-import 'task_model.dart';
-import 'comment_model.dart';
+import 'project.dart';
+import 'user.dart';
+import 'section.dart';
+import 'task.dart';
+import 'comment.dart';
 
 
 class Activity{

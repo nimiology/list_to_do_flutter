@@ -18,7 +18,7 @@ class Greeting extends StatelessWidget {
   Widget build(BuildContext context) {
     final String greetingString = 'Good ' + greeting();
     return Container(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12.5),
         child: RichText(
           text: TextSpan(
             children: <TextSpan>[
