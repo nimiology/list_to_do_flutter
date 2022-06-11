@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../widgets/home_screen/greeting.dart';
 import '../widgets/home_screen/appbar.dart';
 import '../widgets/home_screen/icon_button.dart';
+import '../widgets/home_screen/label_tile.dart';
+import '../widgets/home_screen/labels.dart';
 import '../widgets/home_screen/project_tile.dart';
 import '../widgets/home_screen/show_more_container.dart';
 import '../widgets/task_tile.dart';
@@ -19,9 +21,7 @@ class HomeScreen extends StatelessWidget {
             HomeScreenAppBar(),
             Greeting(),
             HomeScreenIconButtons(),
-            ShowMoreContainer(
-            title: 'Today Tasks',
-            children: [
+            ShowMoreContainer(title: 'Today Tasks', children: [
               TaskTile(),
               TaskTile(),
               TaskTile(),
@@ -33,14 +33,41 @@ class HomeScreen extends StatelessWidget {
               TaskTile(),
               TaskTile(),
             ]),
-            ShowMoreContainer(title:'Projects', children: [
-              ProjectTile(),
-              ProjectTile(),
-              ProjectTile(),
-              ProjectTile(),
-              ProjectTile(),
-            ],),
-
+            ShowMoreContainer(
+              title: 'Projects',
+              children: [
+                ProjectTile(),
+                ProjectTile(),
+                ProjectTile(),
+                ProjectTile(),
+                ProjectTile(),
+              ],
+            ),
+            // TeamTile
+            ShowMoreContainer(
+              title: 'Teams',
+              children: [
+                ProjectTile(),
+                ProjectTile(),
+                ProjectTile(),
+                ProjectTile(),
+                ProjectTile(),
+              ],
+            ),
+            Labels(
+              children: [
+                LabelTile(),
+                LabelTile(),
+                LabelTile(),
+                LabelTile(),
+                LabelTile(),
+                LabelTile(),
+                LabelTile(),
+                LabelTile(),
+                LabelTile(),
+                LabelTile(),
+              ],
+            ),
           ],
         ),
       ),

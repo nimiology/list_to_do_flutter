@@ -42,7 +42,7 @@ class _ShowMoreContainerState extends State<ShowMoreContainer> {
                           });
                         },
                         icon: Icon(
-                          _expanded ? Icons.expand_more : Icons.expand_less,
+                          _expanded ? Icons.expand_less : Icons.expand_more,
                           size: 27.5,
                         )),
                     IconButton(
@@ -66,7 +66,7 @@ class _ShowMoreContainerState extends State<ShowMoreContainer> {
                 : 0,
             width: deviceSize.width,
             child: ListView(
-                padding: EdgeInsets.only(top: 15),
+                padding: const EdgeInsets.only(top: 15),
                 children: widget.children),
           )
         ],
