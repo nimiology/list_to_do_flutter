@@ -22,11 +22,8 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'List To Do',
-        theme: ThemeData(
-            fontFamily: 'SanFrancisco',
-            primaryColor: MaterialColor(0xFF3D0000, SecondColor),
-            accentColor: MaterialColor(0xFF950101, ThirdColor),
-            scaffoldBackgroundColor: MaterialColor(0xFF000000, FirstColor),
+        theme: ThemeData.dark().copyWith(
+            accentColor: MaterialColor(0xFFEE4540, SecondColor),
             textTheme: const TextTheme(
               headline2: TextStyle(
                   fontSize: 30,
@@ -40,6 +37,11 @@ class MyApp extends StatelessWidget {
                   fontFamily: "SanFrancisco"),
               headline4: TextStyle(
                   fontSize: 17.5,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                  fontFamily: "SanFrancisco"),
+              headline5: TextStyle(
+                  fontSize: 13,
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
                   fontFamily: "SanFrancisco"),

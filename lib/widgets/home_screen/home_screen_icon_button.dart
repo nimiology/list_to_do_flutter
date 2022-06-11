@@ -39,12 +39,9 @@ class HomeScreenIconButtons extends StatelessWidget {
     final deviceSize = MediaQuery.of(context).size;
     return Container(
         width: deviceSize.width,
-        height: deviceSize.height * 0.21,
-        margin:const EdgeInsets.symmetric( horizontal: 12.5),
-        decoration: BoxDecoration(
-            color: Theme.of(context).primaryColor,
-            borderRadius: const BorderRadius.all(Radius.circular(25))),
-        padding: const EdgeInsets.symmetric(horizontal: 12.5, vertical: 30),
+        height: deviceSize.height * 0.17,
+        margin:const EdgeInsets.symmetric(horizontal: 12.5),
+        padding: const EdgeInsets.only(right: 12.5, left: 12.5, bottom: 25),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../task_list_tile.dart';
+import '../task_tile.dart';
 
 class TodayTasks extends StatefulWidget {
   const TodayTasks({Key? key}) : super(key: key);
@@ -36,7 +36,7 @@ class _TodayTasksState extends State<TodayTasks> {
                   children: [
                     IconButton(
                         onPressed: () {
-                          setState((){
+                          setState(() {
                             _expanded = !_expanded;
                           });
                         },
@@ -57,7 +57,22 @@ class _TodayTasksState extends State<TodayTasks> {
               )
             ],
           ),
-          if (_expanded) TaskListTile(),
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            height: _expanded ? deviceSize.height * 0.3 : 0,
+            width: deviceSize.width,
+            margin: EdgeInsets.symmetric(vertical: 15),
+            child: ListView(
+              padding: EdgeInsets.symmetric(vertical: 15),
+              children: [
+                TaskTile(),
+                TaskTile(),
+                TaskTile(),
+                TaskTile(),
+              ],
+            ),
+
+          )
         ],
       ),
     );
