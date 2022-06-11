@@ -17,7 +17,7 @@ class _LabelsState extends State<Labels> {
     final theme = Theme.of(context);
     final deviceSize = MediaQuery.of(context).size;
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 17.5),
+      margin: const EdgeInsets.symmetric( horizontal: 17.5),
       child: Column(children: <Widget>[
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

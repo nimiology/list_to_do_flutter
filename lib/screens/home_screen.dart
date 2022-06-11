@@ -5,7 +5,6 @@ import '../widgets/home_screen/appbar.dart';
 import '../widgets/home_screen/icon_button.dart';
 import '../widgets/home_screen/label_tile.dart';
 import '../widgets/home_screen/labels.dart';
-import '../widgets/home_screen/project_tile.dart';
 import '../widgets/home_screen/show_more_container.dart';
 import '../widgets/task_tile.dart';
 
@@ -16,7 +15,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: ListView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HomeScreenAppBar(),
             Greeting(),
