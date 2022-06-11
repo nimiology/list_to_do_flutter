@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 
-import '../task_tile.dart';
+class ShowMoreContainer extends StatefulWidget {
+  String title;
+  List<Widget> children;
 
-class TodayTasks extends StatefulWidget {
-  const TodayTasks({Key? key}) : super(key: key);
+  ShowMoreContainer({Key? key, required this.children, required this.title})
+      : super(key: key);
 
   @override
-  State<TodayTasks> createState() => _TodayTasksState();
+  State<ShowMoreContainer> createState() => _ShowMoreContainerState();
 }
 
-class _TodayTasksState extends State<TodayTasks> {
+class _ShowMoreContainerState extends State<ShowMoreContainer> {
   bool _expanded = true;
 
   @override
@@ -18,15 +20,14 @@ class _TodayTasksState extends State<TodayTasks> {
     final deviceSize = MediaQuery.of(context).size;
 
     return Container(
-      width: deviceSize.width,
-      margin: const EdgeInsets.symmetric(vertical: 25, horizontal: 17.5),
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 17.5),
       child: Column(
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Today Task',
+                widget.title,
                 style: theme.textTheme.headline4,
               ),
               SizedBox(
@@ -57,19 +58,16 @@ class _TodayTasksState extends State<TodayTasks> {
           ),
           AnimatedContainer(
             duration: const Duration(milliseconds: 300),
-            height: _expanded ? deviceSize.height * 0.3 : 0,
+            height: _expanded
+                ? deviceSize.height *
+                    (widget.children.length < 3
+                        ? widget.children.length * 0.1
+                        : 0.25)
+                : 0,
             width: deviceSize.width,
-            margin: EdgeInsets.symmetric(vertical: 15),
             child: ListView(
-              padding: EdgeInsets.symmetric(vertical: 15),
-              children: [
-                TaskTile(),
-                TaskTile(),
-                TaskTile(),
-                TaskTile(),
-              ],
-            ),
-
+                padding: EdgeInsets.only(top: 15),
+                children: widget.children),
           )
         ],
       ),

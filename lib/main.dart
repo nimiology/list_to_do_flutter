@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'List To Do',
         theme: ThemeData.dark().copyWith(
-
             colorScheme: ColorScheme.fromSwatch(
               accentColor: MaterialColor(0xFFEE4540,
                   SecondColor), // but now it should be declared like this

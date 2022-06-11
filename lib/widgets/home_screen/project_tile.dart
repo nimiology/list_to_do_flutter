@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TaskTile extends StatefulWidget {
-  const TaskTile({Key? key}) : super(key: key);
+class ProjectTile extends StatefulWidget {
+  const ProjectTile({Key? key}) : super(key: key);
 
   @override
-  State<TaskTile> createState() => _TaskTileState();
+  State<ProjectTile> createState() => _ProjectTileState();
 }
 
-class _TaskTileState extends State<TaskTile> {
-  bool done = false;
-
+class _ProjectTileState extends State<ProjectTile> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -39,20 +37,21 @@ class _TaskTileState extends State<TaskTile> {
             setState(() {});
           },
           child: ListTile(
-            leading: TextButton(
-              onPressed: () {
-                setState(() {
-                  done = !done;
-                });
-              },
-              child: Icon(
-                done ? Icons.check_circle_outline : Icons.circle_outlined,
-                color: done ? theme.colorScheme.secondary: Colors.white,
-              ),
-            ),
             title: Text(
-              'Playing Video Games',
+              'Social App Gallery',
               style: theme.textTheme.headline5,
+            ),
+            leading: Text(
+              '1',
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w600),
+            ),
+            trailing: Text(
+              '10',
+              style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w600),
             ),
           ),
         ),

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/home_screen/greeting.dart';
-import '../widgets/home_screen/home_screen_appbar.dart';
-import '../widgets/home_screen/home_screen_icon_button.dart';
-import '../widgets/home_screen/today_tasks.dart';
+import '../widgets/home_screen/appbar.dart';
+import '../widgets/home_screen/icon_button.dart';
+import '../widgets/home_screen/project_tile.dart';
+import '../widgets/home_screen/show_more_container.dart';
+import '../widgets/task_tile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -17,7 +19,28 @@ class HomeScreen extends StatelessWidget {
             HomeScreenAppBar(),
             Greeting(),
             HomeScreenIconButtons(),
-            TodayTasks(),
+            ShowMoreContainer(
+            title: 'Today Tasks',
+            children: [
+              TaskTile(),
+              TaskTile(),
+              TaskTile(),
+              TaskTile(),
+              TaskTile(),
+              TaskTile(),
+              TaskTile(),
+              TaskTile(),
+              TaskTile(),
+              TaskTile(),
+            ]),
+            ShowMoreContainer(title:'Projects', children: [
+              ProjectTile(),
+              ProjectTile(),
+              ProjectTile(),
+              ProjectTile(),
+              ProjectTile(),
+            ],),
+
           ],
         ),
       ),

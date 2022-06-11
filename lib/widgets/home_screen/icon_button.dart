@@ -8,19 +8,19 @@ class HomeScreenIconButtons extends StatelessWidget {
     final theme = Theme.of(context);
     return Container(
         child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Text(
-            text,
-            style: theme.textTheme.bodyText1,
-          ),
-          Center(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Text(
+          text,
+          style: theme.textTheme.bodyText1,
+        ),
+        Center(
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
             child: Container(
               width: deviceSize.width * 0.2,
               height: deviceSize.height * 0.1,
-              decoration: BoxDecoration(
-                  color: theme.primaryColor,
-                  borderRadius: const BorderRadius.all(Radius.circular(20))),
+              color: theme.primaryColor,
               child: TextButton(
                 onPressed: () {},
                 child: Text(
@@ -30,7 +30,8 @@ class HomeScreenIconButtons extends StatelessWidget {
               ),
             ),
           ),
-        ],
+        ),
+      ],
     ));
   }
 
@@ -40,7 +41,7 @@ class HomeScreenIconButtons extends StatelessWidget {
     return Container(
         width: deviceSize.width,
         height: deviceSize.height * 0.17,
-        margin:const EdgeInsets.symmetric(horizontal: 12.5),
+        margin: const EdgeInsets.symmetric(horizontal: 12.5),
         padding: const EdgeInsets.only(right: 12.5, left: 12.5, bottom: 25),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
