@@ -33,27 +33,27 @@ class HomeScreen extends StatelessWidget {
               TaskTile(),
               TaskTile(),
             ]),
-            ShowMoreContainer(
-              title: 'Projects',
-              children: [
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
-              ],
-            ),
+            // ShowMoreContainer(
+            //   title: 'Projects',
+            //   children: [
+            //     ProjectTile(),
+            //     ProjectTile(),
+            //     ProjectTile(),
+            //     ProjectTile(),
+            //     ProjectTile(),
+            //   ],
+            // ),
             // TeamTile
-            ShowMoreContainer(
-              title: 'Teams',
-              children: [
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
-              ],
-            ),
+            // ShowMoreContainer(
+            //   title: 'Teams',
+            //   children: [
+            //     ProjectTile(),
+            //     ProjectTile(),
+            //     ProjectTile(),
+            //     ProjectTile(),
+            //     ProjectTile(),
+            //   ],
+            // ),
             Labels(
               children: [
                 LabelTile(),
