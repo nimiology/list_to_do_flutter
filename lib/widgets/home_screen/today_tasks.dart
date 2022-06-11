@@ -41,15 +41,13 @@ class _TodayTasksState extends State<TodayTasks> {
                           });
                         },
                         icon: Icon(
-                          _expanded ? Icons.expand_less : Icons.expand_more,
-                          color: Colors.white,
+                          _expanded ? Icons.expand_more : Icons.expand_less,
                           size: 27.5,
                         )),
                     IconButton(
                         onPressed: () {},
                         icon: const Icon(
                           Icons.add,
-                          color: Colors.white,
                           size: 27.5,
                         )),
                   ],

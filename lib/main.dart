@@ -23,27 +23,27 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'List To Do',
         theme: ThemeData.dark().copyWith(
-            accentColor: MaterialColor(0xFFEE4540, SecondColor),
+
+            colorScheme: ColorScheme.fromSwatch(
+              accentColor: MaterialColor(0xFFEE4540,
+                  SecondColor), // but now it should be declared like this
+            ),
             textTheme: const TextTheme(
               headline2: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
-                  color: Colors.white,
                   fontFamily: "SanFrancisco"),
               bodyText1: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
                   fontFamily: "SanFrancisco"),
               headline4: TextStyle(
                   fontSize: 17.5,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
                   fontFamily: "SanFrancisco"),
               headline5: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
-                  color: Colors.white,
                   fontFamily: "SanFrancisco"),
             )),
         home: HomeScreen(),

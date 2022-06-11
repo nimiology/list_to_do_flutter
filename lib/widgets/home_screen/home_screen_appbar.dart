@@ -25,14 +25,12 @@ class HomeScreenAppBar extends StatelessWidget {
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
               ),
             ),
           ]),
           const Icon(
             Icons.notifications_none,
             size: 25,
-            color: Colors.white,
           )
         ],
       ),

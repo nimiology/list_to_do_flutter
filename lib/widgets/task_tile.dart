@@ -30,7 +30,6 @@ class _TaskTileState extends State<TaskTile> {
           ),
           child: const Icon(
             Icons.delete,
-            color: Colors.white,
             size: 30,
           ),
         ),
@@ -46,7 +45,7 @@ class _TaskTileState extends State<TaskTile> {
             },
             child: Icon(
               done ? Icons.check_circle_outline : Icons.circle_outlined,
-              color: done ? theme.accentColor: Colors.white,
+              color: done ? theme.colorScheme.secondary: Colors.white,
             ),
           ),
           title: Text(

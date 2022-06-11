@@ -19,7 +19,7 @@ class HomeScreenIconButtons extends StatelessWidget {
               width: deviceSize.width * 0.2,
               height: deviceSize.height * 0.1,
               decoration: BoxDecoration(
-                  color: theme.accentColor,
+                  color: theme.primaryColor,
                   borderRadius: const BorderRadius.all(Radius.circular(20))),
               child: TextButton(
                 onPressed: () {},
