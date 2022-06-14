@@ -20,7 +20,7 @@ class _ShowMoreContainerState extends State<ShowMoreContainer> {
     final deviceSize = MediaQuery.of(context).size;
 
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 17.5),
+      margin: const EdgeInsets.only(top: 10, left: 17.5, right:17.5),
       child: Column(
         children: <Widget>[
           Row(
@@ -31,25 +31,26 @@ class _ShowMoreContainerState extends State<ShowMoreContainer> {
                 style: theme.textTheme.headline4,
               ),
               SizedBox(
-                width: 100,
+                width: 65,
+                height: 30,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    IconButton(
-                        onPressed: () {
+                    InkWell(
+                        onTap: () {
                           setState(() {
                             _expanded = !_expanded;
                           });
                         },
-                        icon: Icon(
+                        child: Icon(
                           _expanded ? Icons.expand_less : Icons.expand_more,
-                          size: 27.5,
+                          size: 25,
                         )),
-                    IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
+                    InkWell(
+                        onTap: () {},
+                        child: const Icon(
                           Icons.add,
-                          size: 27.5,
+                          size: 25,
                         )),
                   ],
                 ),
@@ -57,7 +58,8 @@ class _ShowMoreContainerState extends State<ShowMoreContainer> {
             ],
           ),
           AnimatedContainer(
-            duration: const Duration(milliseconds: 300),
+            padding: EdgeInsets.symmetric(vertical: 20),
+            duration: Duration(milliseconds: 300),
             height: _expanded
                 ? deviceSize.height *
                     (widget.children.length < 3
@@ -66,9 +68,9 @@ class _ShowMoreContainerState extends State<ShowMoreContainer> {
                 : 0,
             width: deviceSize.width,
             child: ListView(
-                padding: const EdgeInsets.only(top: 15),
+              padding: const EdgeInsets.only(top: 15),
                 children: widget.children),
-          )
+          ),
         ],
       ),
     );

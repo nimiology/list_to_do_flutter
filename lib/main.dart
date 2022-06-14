@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData.dark().copyWith(
             colorScheme: ColorScheme.fromSwatch(
               accentColor: MaterialColor(0xFFEE4540,
-                  SecondColor), // but now it should be declared like this
+                  SecondColor),
             ),
             textTheme: const TextTheme(
               headline2: TextStyle(

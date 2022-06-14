@@ -10,4 +10,11 @@ class Label {
     required this.user,
     required this.title,
   });
-}
+
+  static fromJson(Map<String, dynamic> json) => Label(
+      id: json['id'],
+      user: User.fromJson(json['user']),
+      title: json['title'],
+    );
+  }
+

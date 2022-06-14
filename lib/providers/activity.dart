@@ -23,4 +23,12 @@ class Activity{
     required this.status,
     this.description,
 });
+  static fromJson(json) => Activity(
+      assignee: json['assignee'] != null ? User.fromJson(json['assignee']) : null,
+      project: json['project'] != null ? Project.fromJson(json['project']) : null,
+      section: json['section'] != null ? Section.fromJson(json['section']) : null,
+      task: json['task'] != null ? Task.fromJson(json['task']) : null,
+      comment: json['comment'] != null ? Comment.fromJson(json['comment']) : null,
+      status: json['status'],
+      description: json['description'],);
 }

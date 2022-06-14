@@ -23,4 +23,14 @@ class Project {
     this.inbox = false,
     this.schedule,
   });
+
+  static fromJson(Map<String, dynamic> json) =>
+      Project(
+          id: json['id'],
+          title: json['title'],
+          owner: User.fromJson(json['owner']),
+          project: json['project'] != null
+              ? Project.fromJson(json['project'])
+              : null);
 }
+

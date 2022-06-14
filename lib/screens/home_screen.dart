@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/home_screen/drawer.dart';
 import '../widgets/home_screen/greeting.dart';
-import '../widgets/home_screen/appbar.dart';
-import '../widgets/home_screen/icon_button.dart';
-import '../widgets/home_screen/label_tile.dart';
-import '../widgets/home_screen/labels.dart';
-import '../widgets/home_screen/show_more_container.dart';
-import '../widgets/task_tile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,63 +9,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            HomeScreenAppBar(),
-            Greeting(),
-            HomeScreenIconButtons(),
-            ShowMoreContainer(title: 'Today Tasks', children: [
-              TaskTile(),
-              TaskTile(),
-              TaskTile(),
-              TaskTile(),
-              TaskTile(),
-              TaskTile(),
-              TaskTile(),
-              TaskTile(),
-              TaskTile(),
-              TaskTile(),
-            ]),
-            // ShowMoreContainer(
-            //   title: 'Projects',
-            //   children: [
-            //     ProjectTile(),
-            //     ProjectTile(),
-            //     ProjectTile(),
-            //     ProjectTile(),
-            //     ProjectTile(),
-            //   ],
-            // ),
-            // TeamTile
-            // ShowMoreContainer(
-            //   title: 'Teams',
-            //   children: [
-            //     ProjectTile(),
-            //     ProjectTile(),
-            //     ProjectTile(),
-            //     ProjectTile(),
-            //     ProjectTile(),
-            //   ],
-            // ),
-            Labels(
-              children: [
-                LabelTile(),
-                LabelTile(),
-                LabelTile(),
-                LabelTile(),
-                LabelTile(),
-                LabelTile(),
-                LabelTile(),
-                LabelTile(),
-                LabelTile(),
-                LabelTile(),
-              ],
-            ),
-          ],
+        drawer:  TheDrawer(),
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+          title: const Text('List To Do',
+              style: TextStyle(fontFamily: 'SanFrancisco')),
         ),
-      ),
-    );
+        body: SafeArea(
+          child: Column(
+            children: [],
+          ),
+        ));
   }
 }

@@ -16,4 +16,14 @@ class Team {
     this.profile,
     this.inviteSlug,
   });
+  static fromJson(Map<String, dynamic> json) => Team(
+        id: json['id'],
+        title: json['title'],
+        owner: User.fromJson(json['owner']),
+        users: json['users'] != null
+            ? List<User>.from(json['users'].map((x) => User.fromJson(x)))
+            : null,
+        profile: json['profile'],
+        inviteSlug: json['inviteSlug'],
+      );
 }

@@ -38,6 +38,19 @@ class Task {
     this.every,
     this.completedDate,
   });
+
+  static fromJson(Map<String, dynamic> json) => Task(
+      id: json['id'],
+      owner: User.fromJson(json['owner']),
+      section: Section.fromJson(json['section']),
+      title: json['title'],
+      assignee: json['assignee'] != null ? User.fromJson(json['assignee']) : null,
+      task: json['task'] != null ? Task.fromJson(json['task']) : null,
+      description: json['description'],
+      color: json['color'],
+      label: json['label'] != null ? Label.fromJson(json['label']) : null,
+      priority: json['priority'],
+      position: json['position'] as int?);
 }
 
 class Tasks with ChangeNotifier{

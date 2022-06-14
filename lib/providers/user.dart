@@ -22,4 +22,17 @@ class User{
     this.setting,
     required this.date_joined,
 });
+
+  static fromJson(Map<String, dynamic> json)=>User(
+      id: json['id'],
+      username: json['username'],
+      firstname: json['firstname'],
+      lastname: json['lastname'],
+      email: json['email'],
+      profile_img: json['profile_img'],
+      header_img: json['header_img'],
+      timezone: json['timezone'],
+      setting: json['setting'],
+      date_joined: DateTime.parse(json['date_joined']),
+    );
 }

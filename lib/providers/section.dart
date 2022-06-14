@@ -14,4 +14,13 @@ class Section {
     required this.position,
     this.archive = false,
   });
-}
+
+  static fromJson(Map<String, dynamic> json) => Section(
+      id: json['id'],
+      title: json['title'],
+      project: Project.fromJson(json['project']),
+      position: json['position'],
+      archive: json['archive'],
+    );
+  }
+

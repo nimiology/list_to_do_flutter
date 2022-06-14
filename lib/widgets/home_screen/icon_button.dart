@@ -18,7 +18,7 @@ class HomeScreenIconButtons extends StatelessWidget {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Container(
-              width: deviceSize.width * 0.2,
+              width: deviceSize.width * 0.22,
               height: deviceSize.height * 0.1,
               color: theme.primaryColor,
               child: TextButton(
@@ -41,14 +41,13 @@ class HomeScreenIconButtons extends StatelessWidget {
     return Container(
         width: deviceSize.width,
         height: deviceSize.height * 0.17,
-        margin: const EdgeInsets.symmetric(horizontal: 12.5),
         padding: const EdgeInsets.only(right: 12.5, left: 12.5, bottom: 25),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Button(context, 'Task', '✔'),
-            Button(context, 'Project', '✨'),
-            Button(context, 'Team', '🤝'),
+            Button(context, 'Labels', '📝'),
+            Button(context, 'Activity', '📈'),
           ],
         ));
   }
