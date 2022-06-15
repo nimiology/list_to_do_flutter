@@ -32,17 +32,17 @@ class MyApp extends StatelessWidget {
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
                   fontFamily: "SanFrancisco"),
-              bodyText1: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
+              headline3: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w500,
                   fontFamily: "SanFrancisco"),
               headline4: TextStyle(
                   fontSize: 17.5,
                   fontWeight: FontWeight.w600,
                   fontFamily: "SanFrancisco"),
               headline5: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w600,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
                   fontFamily: "SanFrancisco"),
             )),
         home: HomeScreen(),

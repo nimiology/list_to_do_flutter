@@ -6,6 +6,7 @@ class HomeScreenAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
+    final theme = Theme.of(context);
     return Container(
       margin: const EdgeInsets.only(top: 30, right: 12.5, left: 12.5),
       width: deviceSize.width,
@@ -14,23 +15,20 @@ class HomeScreenAppBar extends StatelessWidget {
         children: [
           Row(children: [
             const CircleAvatar(
-              maxRadius: 12.5,
+              maxRadius: 16,
               backgroundColor: Colors.white,
             ),
             SizedBox(
-              width: deviceSize.width * 0.015,
+              width: 20,
             ),
-            const Text(
-              'List To Do',
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-              ),
+            Text(
+              'Nima',
+              style: theme.textTheme.headline3
             ),
           ]),
           const Icon(
-            Icons.notifications_none,
-            size: 25,
+            Icons.settings,
+            size: 30,
           )
         ],
       ),

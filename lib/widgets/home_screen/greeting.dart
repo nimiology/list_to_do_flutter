@@ -18,17 +18,20 @@ class Greeting extends StatelessWidget {
   Widget build(BuildContext context) {
     final String greetingString = 'Good ' + greeting();
     return Container(
-        margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 12.5),
+        margin: const EdgeInsets.only(top: 20, bottom: 7.5, right:12.5, left: 12.5),
         child: RichText(
           text: TextSpan(
             children: <TextSpan>[
               TextSpan(
-                  text: greetingString,
-                  style: Theme.of(context).textTheme.headline2,
+                text: greetingString,
+                style: Theme.of(context).textTheme.headline2,
               ),
               TextSpan(
                   text: ' 👋',
-                  style:Theme.of(context).textTheme.headline2?.copyWith(fontFamily: 'emoji'))
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline2
+                      ?.copyWith(fontFamily: 'emoji'))
             ],
           ),
         ));

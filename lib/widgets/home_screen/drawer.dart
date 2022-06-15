@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:list_to_do/widgets/home_screen/project_tile.dart';
 import 'package:list_to_do/widgets/home_screen/show_more_container.dart';
+import 'package:list_to_do/widgets/home_screen/team_tile.dart';
 
 import '../task_tile.dart';
 import 'appbar.dart';
@@ -20,12 +21,11 @@ class TheDrawer extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HomeScreenAppBar(),
-            Greeting(),
-            HomeScreenIconButtons(),
+            const HomeScreenAppBar(),
+            const HomeScreenIconButtons(),
             ShowMoreContainer(
               title: 'Projects',
-              children: [
+              children: const [
                 ProjectTile(),
                 ProjectTile(),
                 ProjectTile(),
@@ -40,12 +40,13 @@ class TheDrawer extends StatelessWidget {
             // TeamTile
             ShowMoreContainer(
               title: 'Teams',
-              children: [
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
-                ProjectTile(),
+              children: const [
+                TeamTile(),
+                TeamTile(),
+                TeamTile(),
+                TeamTile(),
+                TeamTile(),
+                TeamTile(),
               ],
             ),
 

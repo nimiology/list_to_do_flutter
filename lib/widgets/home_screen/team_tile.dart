@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ProjectTile extends StatefulWidget {
-  const ProjectTile({Key? key}) : super(key: key);
+class TeamTile extends StatefulWidget {
+  const TeamTile({Key? key}) : super(key: key);
 
   @override
-  State<ProjectTile> createState() => _ProjectTileState();
+  State<TeamTile> createState() => _TeamTileState();
 }
 
-class _ProjectTileState extends State<ProjectTile> {
+class _TeamTileState extends State<TeamTile> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -32,10 +32,6 @@ class _ProjectTileState extends State<ProjectTile> {
                 ),
               ],
             ),
-          ),
-          Text(
-            '10',
-            style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w600),
           ),
         ],
       ),
